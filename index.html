@@ -1,13 +1,19 @@
+<!DOCTYPE html>
 <html>
-<head><title>My Test Lab</title></head>
+<head><title>My Hack Lab V2</title></head>
 <body>
-<h2>Login to My Lab</h2>
-<form>
-Username: <input type="text" id="user"><br><br>
-Password: <input type="password"><br><br>
-<button>Login</button>
-</form>
-<p>Hint: My username is admin</p>
-<!-- TODO: password is 12345 - remove later -->
+  <h1>My Vulnerable Search Lab - Level 2</h1>
+  <input id="search" placeholder="Search something...">
+  <button onclick="search()">Search</button>
+  <p id="result"></p>
+
+  <script>
+    function search(){
+      let q = document.getElementById('search').value;
+      // VULNERABLE CODE - White Hat রা এটা খুঁজবে
+      document.getElementById('result').innerHTML = "You searched for: " + q;
+    }
+  </script>
+  <p>Level 1 Password was: 12345 (Now Fixed)</p>
 </body>
 </html>
